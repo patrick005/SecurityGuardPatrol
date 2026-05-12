@@ -1,15 +1,50 @@
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Android
+android/.gradle/
+android/local.properties
+
+# iOS / macOS
+ios/Flutter/.last_build_id
+macos/Flutter/ephemeral/
+
+# Windows / Linux / CMake
 CMakeLists.txt.user
 CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
+CMakeFiles/
+CMakeScripts/
+Testing/
 Makefile
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
-_deps
+_deps/
 CMakeUserPresets.json
+cmake-build-*/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs / temp
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Private patrol data
+lib/data/checkpoint_data.dart
+user_memo.json
+route_config.json
 
 # CLion
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
