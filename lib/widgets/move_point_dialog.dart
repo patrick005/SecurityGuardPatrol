@@ -13,34 +13,51 @@ Future<int?> showMovePointDialog(
     builder: (_) {
       return AlertDialog(
         title: const Text('포인트 강제이동'),
+
         content: SizedBox(
           width: 350,
           height: 400,
+
           child: ListView.builder(
             itemCount: points.length,
+
             itemBuilder: (context, index) {
               final point = points[index];
 
               final memo = memoMap[point.id] ?? '';
-              final displayText = memo.trim().isNotEmpty
-                  ? memo
-                  : point.description;
+
+              final displayText =
+                  memo.trim().isNotEmpty
+                      ? memo
+                      : point.description;
 
               return ListTile(
-                title: Text('(${point.id}) ${point.name}'),
+                title: Text(
+                  '(${point.id}) ${point.name}',
+                ),
+
                 subtitle: Text(
-                  displayText.isEmpty ? '설명 없음' : displayText,
+                  displayText.isEmpty
+                      ? '설명 없음'
+                      : displayText,
+
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
-                onTap: () => Navigator.pop(context, index),
+
+                onTap: () {
+                  Navigator.pop(context, index);
+                },
               );
             },
           ),
         ),
+
         actions: [
           TextButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              Navigator.pop(context);
+            },
             child: const Text('취소'),
           ),
         ],
