@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="security_guard_patrol"
+        android:label="순찰 보조"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

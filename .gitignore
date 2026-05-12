@@ -6,6 +6,8 @@
 .pub-cache/
 .pub/
 build/
+.metadata
+*.iml
 
 # Android
 android/.gradle/
@@ -45,6 +47,7 @@ Thumbs.db
 lib/data/checkpoint_data.dart
 user_memo.json
 route_config.json
+devtools_options.yaml
 
 # CLion
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
